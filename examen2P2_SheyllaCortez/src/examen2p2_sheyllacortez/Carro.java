@@ -14,17 +14,13 @@ public class Carro implements Serializable{
     private String marca = "";
     private String modelo = "";
     private int speed = 0;
-    
-        
+           
     private static final long SerialVersionUID=444L;
-
-    public Carro() {
-    }
-       
+ 
     public Carro(String marca, String modelo, int velocidad) {
         this.marca = marca;
         this.modelo = modelo;
-        this.speed = speed;
+        this.speed = velocidad;
                 
     }
     
@@ -54,6 +50,6 @@ public class Carro implements Serializable{
 
     @Override
     public String toString() {
-        return "Carro{" + "marca=" + marca + ", modelo=" + modelo + ", speed=" + speed + '}';
+        return marca + " " +modelo;
     }
 }

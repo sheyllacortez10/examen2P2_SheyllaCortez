@@ -18,9 +18,9 @@ import java.util.ArrayList;
  */
 public class adminCarro {
     private ArrayList<Carro> listaCarros = new ArrayList<>();
-    private File archivo = null;
+    private File archivo;
     
-    public void adminCarro(String path){
+    public adminCarro(String path){
         archivo = new File(path);
     }
 
@@ -67,12 +67,14 @@ public class adminCarro {
                 } catch (EOFException e) {
                     //encontro el final del archivo
                 }
+                
                 objeto.close();
                 entrada.close();
             } //fin if           
         } catch (Exception ex) {
             ex.printStackTrace();
         }
+
     }
 
     public void escribirArchivo() {
