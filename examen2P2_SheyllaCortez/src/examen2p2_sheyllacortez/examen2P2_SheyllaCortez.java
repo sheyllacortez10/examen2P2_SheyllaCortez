@@ -71,7 +71,18 @@ public class examen2P2_SheyllaCortez extends javax.swing.JFrame {
         jLabel13 = new javax.swing.JLabel();
         jLabel_veloPar1 = new javax.swing.JLabel();
         jLabel_veloPar2 = new javax.swing.JLabel();
-        jButton2 = new javax.swing.JButton();
+        jButton_iniciarPartida = new javax.swing.JButton();
+        jDialog_IniciarPartida = new javax.swing.JDialog();
+        jPanel2 = new javax.swing.JPanel();
+        jLabel14 = new javax.swing.JLabel();
+        jLabel_setTiempo = new javax.swing.JLabel();
+        jSeparator1 = new javax.swing.JSeparator();
+        jLabel15 = new javax.swing.JLabel();
+        jLabel_seleccionado1 = new javax.swing.JLabel();
+        jProgressBar_carro1 = new javax.swing.JProgressBar();
+        jLabel_seleccionado2 = new javax.swing.JLabel();
+        jProgressBar_carro2 = new javax.swing.JProgressBar();
+        jButton_iniciaRace = new javax.swing.JButton();
         jPanel_crear = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
@@ -122,7 +133,12 @@ public class examen2P2_SheyllaCortez extends javax.swing.JFrame {
 
         jLabel13.setText("Velocidad");
 
-        jButton2.setText("Iniciar");
+        jButton_iniciarPartida.setText("Iniciar");
+        jButton_iniciarPartida.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton_iniciarPartidaMouseClicked(evt);
+            }
+        });
 
         javax.swing.GroupLayout jDialog_partidaLayout = new javax.swing.GroupLayout(jDialog_partida.getContentPane());
         jDialog_partida.getContentPane().setLayout(jDialog_partidaLayout);
@@ -169,7 +185,7 @@ public class examen2P2_SheyllaCortez extends javax.swing.JFrame {
                         .addGap(0, 0, Short.MAX_VALUE))))
             .addGroup(jDialog_partidaLayout.createSequentialGroup()
                 .addGap(161, 161, 161)
-                .addComponent(jButton2)
+                .addComponent(jButton_iniciarPartida)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jDialog_partidaLayout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -224,8 +240,97 @@ public class examen2P2_SheyllaCortez extends javax.swing.JFrame {
                     .addComponent(jLabel_veloPar2, javax.swing.GroupLayout.DEFAULT_SIZE, 20, Short.MAX_VALUE)
                     .addComponent(jLabel_veloPar1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addGap(18, 18, 18)
-                .addComponent(jButton2)
+                .addComponent(jButton_iniciarPartida)
                 .addGap(54, 54, 54))
+        );
+
+        jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel14.setText("TIEMPO");
+
+        jLabel15.setText("PROGRESO");
+
+        jButton_iniciaRace.setText("Iniciar");
+        jButton_iniciaRace.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton_iniciaRaceMouseClicked(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jDialog_IniciarPartidaLayout = new javax.swing.GroupLayout(jDialog_IniciarPartida.getContentPane());
+        jDialog_IniciarPartida.getContentPane().setLayout(jDialog_IniciarPartidaLayout);
+        jDialog_IniciarPartidaLayout.setHorizontalGroup(
+            jDialog_IniciarPartidaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jDialog_IniciarPartidaLayout.createSequentialGroup()
+                .addContainerGap(53, Short.MAX_VALUE)
+                .addGroup(jDialog_IniciarPartidaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jDialog_IniciarPartidaLayout.createSequentialGroup()
+                        .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(208, 208, 208))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jDialog_IniciarPartidaLayout.createSequentialGroup()
+                        .addGroup(jDialog_IniciarPartidaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(jProgressBar_carro2, javax.swing.GroupLayout.PREFERRED_SIZE, 471, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jProgressBar_carro1, javax.swing.GroupLayout.PREFERRED_SIZE, 471, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(46, 46, 46))))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jDialog_IniciarPartidaLayout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addGroup(jDialog_IniciarPartidaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jDialog_IniciarPartidaLayout.createSequentialGroup()
+                        .addComponent(jButton_iniciaRace)
+                        .addGap(246, 246, 246))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jDialog_IniciarPartidaLayout.createSequentialGroup()
+                        .addComponent(jLabel_seleccionado2, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(237, 237, 237))))
+            .addGroup(jDialog_IniciarPartidaLayout.createSequentialGroup()
+                .addGroup(jDialog_IniciarPartidaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jDialog_IniciarPartidaLayout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(jSeparator1))
+                    .addGroup(jDialog_IniciarPartidaLayout.createSequentialGroup()
+                        .addGap(243, 243, 243)
+                        .addComponent(jLabel_seleccionado1, javax.swing.GroupLayout.PREFERRED_SIZE, 83, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(0, 0, Short.MAX_VALUE)))
+                .addContainerGap())
+            .addGroup(jDialog_IniciarPartidaLayout.createSequentialGroup()
+                .addGroup(jDialog_IniciarPartidaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jDialog_IniciarPartidaLayout.createSequentialGroup()
+                        .addGap(254, 254, 254)
+                        .addComponent(jLabel15))
+                    .addGroup(jDialog_IniciarPartidaLayout.createSequentialGroup()
+                        .addGap(260, 260, 260)
+                        .addComponent(jLabel14))
+                    .addGroup(jDialog_IniciarPartidaLayout.createSequentialGroup()
+                        .addGap(251, 251, 251)
+                        .addComponent(jLabel_setTiempo, javax.swing.GroupLayout.PREFERRED_SIZE, 66, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(0, 0, Short.MAX_VALUE))
+        );
+        jDialog_IniciarPartidaLayout.setVerticalGroup(
+            jDialog_IniciarPartidaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jDialog_IniciarPartidaLayout.createSequentialGroup()
+                .addGroup(jDialog_IniciarPartidaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addGroup(jDialog_IniciarPartidaLayout.createSequentialGroup()
+                        .addGap(93, 93, 93)
+                        .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jDialog_IniciarPartidaLayout.createSequentialGroup()
+                        .addGap(38, 38, 38)
+                        .addComponent(jLabel14)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jLabel_setTiempo, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(19, 19, 19)
+                .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(jLabel15)
+                .addGap(18, 18, 18)
+                .addComponent(jLabel_seleccionado1, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jProgressBar_carro1, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(jLabel_seleccionado2, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jProgressBar_carro2, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(30, 30, 30)
+                .addComponent(jButton_iniciaRace, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(27, Short.MAX_VALUE))
         );
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -366,6 +471,22 @@ public class examen2P2_SheyllaCortez extends javax.swing.JFrame {
         this.setVisible(true);
     }//GEN-LAST:event_jButton_crearCarroMouseClicked
 
+    private void jButton_iniciarPartidaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton_iniciarPartidaMouseClicked
+        adminCarro ac = new adminCarro("./carros.bin");
+        ac.cargarArchivo();
+        jDialog_IniciarPartida.pack();
+        jDialog_IniciarPartida.setLocationRelativeTo(jDialog_partida);
+        jDialog_IniciarPartida.setVisible(true);
+        jLabel_seleccionado1.setText(ac.getListaCarros().get(jComboBox_jugador1.getSelectedIndex()).toString());
+        jLabel_seleccionado2.setText(ac.getListaCarros().get(jComboBox_jugador2.getSelectedIndex()).toString());
+    }//GEN-LAST:event_jButton_iniciarPartidaMouseClicked
+
+    private void jButton_iniciaRaceMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton_iniciaRaceMouseClicked
+        boolean sigue = true;
+        HiloTiempo cronometro = new HiloTiempo(jLabel_setTiempo, sigue, jProgressBar_carro1, jProgressBar_carro2 );
+        cronometro.start();
+    }//GEN-LAST:event_jButton_iniciaRaceMouseClicked
+
     /**
      * @param args the command line arguments
      */
@@ -410,17 +531,21 @@ public class examen2P2_SheyllaCortez extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton_crear1;
     private javax.swing.JButton jButton_crearCarro;
+    private javax.swing.JButton jButton_iniciaRace;
+    private javax.swing.JButton jButton_iniciarPartida;
     private javax.swing.JComboBox<String> jComboBox_jugador1;
     private javax.swing.JComboBox<String> jComboBox_jugador2;
+    private javax.swing.JDialog jDialog_IniciarPartida;
     private javax.swing.JDialog jDialog_partida;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel13;
+    private javax.swing.JLabel jLabel14;
+    private javax.swing.JLabel jLabel15;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
@@ -433,10 +558,17 @@ public class examen2P2_SheyllaCortez extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel_marcaPar2;
     private javax.swing.JLabel jLabel_modeloPar1;
     private javax.swing.JLabel jLabel_modeloPar2;
+    private javax.swing.JLabel jLabel_seleccionado1;
+    private javax.swing.JLabel jLabel_seleccionado2;
+    private javax.swing.JLabel jLabel_setTiempo;
     private javax.swing.JLabel jLabel_veloPar1;
     private javax.swing.JLabel jLabel_veloPar2;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel_crear;
+    private javax.swing.JProgressBar jProgressBar_carro1;
+    private javax.swing.JProgressBar jProgressBar_carro2;
+    private javax.swing.JSeparator jSeparator1;
     private javax.swing.JSpinner jSpinner_speed1;
     private javax.swing.JTextField jTextField_marca1;
     private javax.swing.JTextField jTextField_modelo1;
